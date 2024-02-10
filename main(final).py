@@ -62,12 +62,12 @@ while continue_playing is True:
         difficulty_invalid = True
         while difficulty_invalid is True:
             difficulty_invalid = True
-            computer_difficulty = input("Please enter the difficulty of the computer (please enter \"1\", \"2\") or \"3\": ")
+            computer_difficulty = input("Please enter the difficulty of the computer (please enter \"1\", \"2\" or \"3\"): ")
 
             if computer_difficulty == '1' or computer_difficulty == '2' or computer_difficulty == '3':
                 difficulty_invalid = False
             else:
-                print("It seems that isn't a valid answer ... (please enter \"1\", \"2\") or \"3\"")
+                print("It seems that isn't a valid answer ... (please enter \"1\", \"2\" or \"3\")")
                 print("1: Computer makes random moves")
                 print("2: Computer makes intelligent moves")
                 print("3: Computer makes the most intelligent moves")
