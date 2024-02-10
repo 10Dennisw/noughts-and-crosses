@@ -101,6 +101,7 @@ while continue_playing is True:
             # This will generate a random computer move
             if computer_difficulty == "1":
                 move = computer.random_computer_move()
+                user.removing_move(move)
                 moves_lst_p1, moves_lst_p2 = board.adding_move(move, current_player)
 
             # This will generate a smart computer move using the minimax algorithm
@@ -123,6 +124,7 @@ while continue_playing is True:
         else:
             # This generate a user move and will update the move list and the board
             move = user.user_move()
+            computer.removing_move(move)
             moves_lst_p1, moves_lst_p2 = board.adding_move(move, current_player)
             board.changing_board(move, current_player)
 
