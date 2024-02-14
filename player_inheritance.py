@@ -46,7 +46,6 @@ class UserPlayer(noughts_and_cross_player):
                 user_move = int(user_move)
                 if user_move in self.possible_moves:
                     self.possible_moves.remove(user_move)
-                    print(self.possible_moves)
                     invalid_move = False
                 else:
                     print("That appears not to be a valid move ...")
@@ -65,7 +64,6 @@ class ComputerPlayer(noughts_and_cross_player):
         '''
         computer_move = random.choice(self.possible_moves)
         self.possible_moves.remove(computer_move)
-        print(self.possible_moves)
         return computer_move
 
     def evaluate(self, moves_player_1, moves_player_2, depth):
